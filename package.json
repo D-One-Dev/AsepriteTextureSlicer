@@ -1,0 +1,25 @@
+{
+    "name": "Texture Slicer",
+    "displayName": "Texture Slicer",
+    "description": "A tool for slicing a texture in layers according to color",
+    "version": "0.1.0",
+    "author": {
+      "name": "D_One",
+      "email": "",
+      "url": "https://pointofview.itch.io/"
+    },
+    "contributors": [],
+    "publisher": "D_One",
+    "license": "CC0",
+    "categories": [
+      "Scripts"
+    ],
+    "contributes": {
+      "scripts": [
+        {
+          "path": "./extension.lua"
+        }
+      ]
+    }
+  }
+  
