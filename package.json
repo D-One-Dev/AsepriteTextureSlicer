@@ -2,7 +2,7 @@
     "name": "Texture Slicer",
     "displayName": "Texture Slicer",
     "description": "A tool for slicing a texture in layers according to color",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
       "name": "D_One",
       "email": "",

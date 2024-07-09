@@ -48,15 +48,17 @@ function slicer:Slice()
         for y = 0, image.height - 1 do
             color = Color(image:getPixel(x,y))
             local colorIndex = slicer:FindInArray(color, colorsArray)
-            --if color is new and is not transparent
-            if color.alpha > 0 and colorIndex == false then
-                --adding color to array
-                colorsArray[#colorsArray+1] = color
-                --creating according image
-                layers[#layers+1] = Image(image.spec)
-                layers[#layers]:drawPixel(x, y, color)
-            else
-                layers[colorIndex]:drawPixel(x, y, color)
+            if color.alpha > 0 then
+                --if color is new and is not transparent
+                if colorIndex == false then
+                    --adding color to array
+                    colorsArray[#colorsArray+1] = color
+                    --creating according image
+                    layers[#layers+1] = Image(image.spec)
+                    layers[#layers]:drawPixel(x, y, color)
+                else
+                    layers[colorIndex]:drawPixel(x, y, color)
+                end
             end
         end
     end
